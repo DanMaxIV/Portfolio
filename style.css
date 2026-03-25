@@ -376,6 +376,9 @@ button:hover {
     margin: 0 0 50px 0;
     font-size: 30;
   }
+  .skills .skillcard {
+    opacity: 1 !important;
+  }
   .projects span {
     font-size: 30px;
     display: flex;
@@ -425,6 +428,7 @@ button:hover {
   }
   .projectCard {
     width: 100%;
+    opacity: 1 !important;
   }
   .projectCard a {
     display: block;
@@ -521,7 +525,6 @@ button:hover {
   .skills .skillcard {
     width: 100px;
     justify-content: center !important;
-    opacity: 1 !important;
   }
   .skillSet {
     justify-content: center;
