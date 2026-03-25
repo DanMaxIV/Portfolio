@@ -360,6 +360,7 @@ button:hover {
     flex-direction: column-reverse;
     text-align: center;
     justify-content: space-evenly;
+    margin-top: 0px;
   }
   .main .left {
     width: 100%;
@@ -450,10 +451,8 @@ button:hover {
     display: flex;
     flex-direction: column-reverse;
     height: auto;
-    padding-top: 50px;
   }
   .main .right {
-    margin: 0 auto 20px;
     width: 250px;
     height: 250px;
   }
@@ -476,6 +475,9 @@ button:hover {
 }
 
 @media screen and (min-width: 1300px) {
+  #Portfolio, #Skill{
+    scroll-margin-top: 100px !important;
+  }
   .main,
   .aboutMe,
   .skills,
@@ -501,7 +503,7 @@ button:hover {
     scroll-margin-top: 30px;
   }
   .aboutMe {
-    padding: 90px 0 50px 0;
+    /* padding: 50px 0 50px 0; */
     .wrap {
       justify-content: center;
       min-height: calc(100vh - 212px);
