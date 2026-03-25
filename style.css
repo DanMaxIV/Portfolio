@@ -104,16 +104,16 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-     min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
   }
   .left {
     width: 50%;
     h2 {
       color: #2563eb;
     }
-    h3{
-        font-size: 40px;
-        font-weight: 400;
+    h3 {
+      font-size: 40px;
+      font-weight: 400;
     }
   }
   .right {
@@ -307,9 +307,13 @@ button:hover {
 }
 
 @media screen and (max-width: 768px) {
-    #Skill{
-      scroll-margin-top: 40px;
-    }
+  #Home,
+  #About,
+  #Skill,
+  #Contact,
+  #Portfolio {
+    scroll-margin-top: 40px;
+  }
   .hamburger {
     display: flex;
   }
@@ -367,12 +371,12 @@ button:hover {
   .main .left h3 {
     font-size: 20px;
   }
-  .skills h2{
+  .skills h2 {
     justify-self: center;
     margin: 0 0 50px 0;
     font-size: 30;
   }
-  .projects span{
+  .projects span {
     font-size: 30px;
     display: flex;
     justify-self: center;
@@ -396,7 +400,7 @@ button:hover {
   .aboutMe .wrap .left h2 {
     font-size: 30px !important;
   }
-  .aboutMe .wrap{
+  .aboutMe .wrap {
     flex-direction: column-reverse;
   }
   .aboutMe .left {
@@ -408,9 +412,9 @@ button:hover {
     margin-right: 0px;
     align-self: center;
   }
-  .aboutMe .img{
+  .aboutMe .img {
     width: 100%;
-    transform: translateY(63px)
+    transform: translateY(63px);
   }
 
   .skills,
@@ -432,7 +436,7 @@ button:hover {
   .contact h4 {
     font-size: 20px;
   }
-  .contact .wrap{
+  .contact .wrap {
     flex-direction: column;
   }
 }
@@ -479,7 +483,7 @@ button:hover {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
-  section{
+  section {
     margin-top: 60px !important;
     margin-bottom: 60px !important;
   }
