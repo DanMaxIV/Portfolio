@@ -282,7 +282,6 @@ button:hover {
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
 }
 #Home,
 #About,
@@ -308,7 +307,10 @@ button:hover {
 }
 
 @media screen and (max-width: 768px) {
-  .hamburger {
+  html{
+    overflow-x: hidden;
+  }
+    .hamburger {
     display: flex;
   }
   .header {
@@ -353,6 +355,7 @@ button:hover {
   .main {
     flex-direction: column-reverse;
     text-align: center;
+    justify-content: space-evenly;
   }
   .main .left {
     width: 100%;
@@ -361,7 +364,7 @@ button:hover {
   .main .left h1 {
     font-size: 42px;
   }
-  .main .left h2 {
+  .main .left h3 {
     font-size: 20px;
   }
 
@@ -399,7 +402,7 @@ button:hover {
   .projects,
   .contact {
     margin: 20px;
-    padding: 40px 20px;
+    /* padding: 40px 20px; */
   }
   .projectCard {
     width: 100%;
