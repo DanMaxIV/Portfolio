@@ -2,9 +2,9 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  overflow-x: hidden;
   color: aliceblue;
   background-color: rgb(5, 2, 27);
-  overflow-x: hidden;
   font-family: "Inter", sans-serif;
 }
 button {
@@ -307,9 +307,6 @@ button:hover {
 }
 
 @media screen and (max-width: 768px) {
-  html{
-    overflow-x: hidden;
-  }
     .hamburger {
     display: flex;
   }
@@ -367,7 +364,16 @@ button:hover {
   .main .left h3 {
     font-size: 20px;
   }
-
+  .skills h2{
+    justify-self: center;
+    margin: 0 0 50px 0;
+    font-size: 30;
+  }
+  .projects span{
+    font-size: 30px;
+    display: flex;
+    justify-self: center;
+  }
   .main .right {
     width: 70vw;
     height: 70vw;
@@ -379,7 +385,13 @@ button:hover {
   }
   .aboutMe {
     text-align: center;
-    padding: 50px 20px;
+    padding: 50px 0;
+  }
+  .aboutMe .wrap .left h3 {
+    font-size: 20px !important;
+  }
+  .aboutMe .wrap .left h2 {
+    font-size: 30px !important;
   }
   .aboutMe .wrap{
     flex-direction: column-reverse;
@@ -402,7 +414,7 @@ button:hover {
   .projects,
   .contact {
     margin: 20px;
-    /* padding: 40px 20px; */
+    padding: 40px 0;
   }
   .projectCard {
     width: 100%;
@@ -416,6 +428,9 @@ button:hover {
   }
   .contact h4 {
     font-size: 20px;
+  }
+  .contact .wrap{
+    flex-direction: column;
   }
 }
 
