@@ -5,6 +5,7 @@ body {
   color: aliceblue;
   background-color: rgb(5, 2, 27);
   overflow-x: hidden;
+  font-family: "Inter", sans-serif;
 }
 button {
   padding: 5px;
@@ -58,7 +59,8 @@ button:hover {
 }
 .main {
   display: flex;
-  height: 90vh;
+  min-height: calc(100vh - 100px);
+  align-items: center;
   margin: 50px 0 0 0;
   justify-content: space-between;
   .left {
@@ -70,7 +72,7 @@ button:hover {
     }
     h3 {
       font-size: 40px;
-      font-weight: 700;
+      font-weight: 400;
       margin: 30px 0;
     }
     span {
@@ -98,12 +100,20 @@ button:hover {
   }
 }
 .aboutMe {
-  display: flex;
-  justify-content: space-between;
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     min-height: calc(100vh - 100px);
+  }
   .left {
     width: 50%;
     h2 {
       color: #2563eb;
+    }
+    h3{
+        font-size: 40px;
+        font-weight: 400;
     }
   }
   .right {
@@ -124,7 +134,6 @@ button:hover {
   }
 }
 .skills {
-  margin: 0 50px;
   .skillSet {
     display: flex;
     gap: 50px;
@@ -147,11 +156,12 @@ button:hover {
     }
   }
 }
-.skills h2{
-    color: #2563eb;
+.skills h2 {
+  color: #2563eb;
 }
 .projects {
   margin: 50px 50px 0;
+  min-height: calc(100vh - 100px);
   span {
     margin: 20px 0;
     font-size: 24px;
@@ -199,7 +209,7 @@ button:hover {
         margin-top: 15px;
         transition: color 0.3s ease;
       }
-      a:hover{
+      a:hover {
         color: #fff;
       }
     }
@@ -227,32 +237,54 @@ button:hover {
   box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
   align-items: center;
 }
-.contact h4{
-    color: #2563eb;
-    font-size: 32px;
+.contact h4 {
+  color: #2563eb;
+  font-size: 32px;
 }
-.contact h5{
-    color: #2563eb;
+.contact h5 {
+  color: #2563eb;
 }
-.contact h5 a{
-    text-decoration: none;
-    color: #fff;
+.contact h5 a {
+  text-decoration: none;
+  color: #fff;
 }
-.contact div{
-    display: flex;
-    gap: 10px;
+.contact div {
+  display: flex;
+  gap: 10px;
 }
-.reveal{
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1.2s cubic-bezier(0.5, 0, 0, 1);
-    visibility: hidden;
+.contact .wrap {
+  justify-content: space-between;
+  display: flex;
+  text-align: center;
+  width: 100%;
+  align-items: center;
 }
-.reveal.active{
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1.2s cubic-bezier(0.5, 0, 0, 1);
+  visibility: hidden;
 }
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+.wrap {
+  margin: 0 50px;
+}
+.header,
+.main,
+.aboutMe,
+.skills,
+.projects,
+.contact {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+#Home,
 #About,
 #Skill,
 #Contact,
@@ -291,7 +323,7 @@ button:hover {
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 70px;
+    top: 50px;
     flex-direction: column;
     background-color: rgb(5, 2, 27);
     width: 100%;
@@ -343,9 +375,11 @@ button:hover {
     align-self: center;
   }
   .aboutMe {
-    flex-direction: column-reverse;
     text-align: center;
     padding: 50px 20px;
+  }
+  .aboutMe .wrap{
+    flex-direction: column-reverse;
   }
   .aboutMe .left {
     width: 100%;
@@ -353,7 +387,12 @@ button:hover {
   .aboutMe .right {
     width: 280px;
     height: 280px;
+    margin-right: 0px;
     align-self: center;
+  }
+  .aboutMe .img{
+    width: 100%;
+    transform: translateY(63px)
   }
 
   .skills,
@@ -365,43 +404,62 @@ button:hover {
   .projectCard {
     width: 100%;
   }
-  .projectCard a{
+  .projectCard a {
     display: block;
   }
   .contact {
     gap: 20px;
     text-align: center;
   }
-  .contact h4{
+  .contact h4 {
     font-size: 20px;
   }
 }
 
 @media screen and (max-width: 400px) {
-    .main{
-        display: flex;
-        flex-direction: column-reverse;
-        height: auto;
-        padding-top: 50px;
-    }
-    .main .right{
-        margin: 0 auto 20px;
-        width: 250px;
-        height: 250px;
-    }
-      .contact {
+  .main {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+    padding-top: 50px;
+  }
+  .main .right {
+    margin: 0 auto 20px;
+    width: 250px;
+    height: 250px;
+  }
+  .contact {
     gap: 20px;
     text-align: center;
     flex-direction: column;
   }
-  .contact h4{
+  .contact h4 {
     font-size: 20px;
   }
-  .contact h4, h5{
+  .contact h4,
+  h5 {
     margin: 0;
   }
-  .contact div a img{
+  .contact div a img {
     width: 20px;
     height: 20px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .main,
+  .aboutMe,
+  .skills,
+  .projects,
+  .contact {
+    max-width: 1400px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  section{
+    margin-top: 60px !important;
+    margin-bottom: 60px !important;
   }
 }
