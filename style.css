@@ -321,8 +321,10 @@ button:hover {
   }
 
   .main .right {
-    width: 280px;
-    height: 280px;
+    width: 70vw;
+    height: 70vw;
+    max-width: 300px;
+    max-height: 300px;
     margin-right: 0;
     margin-bottom: 30px;
     align-self: center;
@@ -356,5 +358,37 @@ button:hover {
   .contact {
     gap: 20px;
     text-align: center;
+  }
+  .contact h4{
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+    .main{
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+        padding-top: 50px;
+    }
+    .main .right{
+        margin: 0 auto 20px;
+        width: 250px;
+        height: 250px;
+    }
+      .contact {
+    gap: 20px;
+    text-align: center;
+    flex-direction: column;
+  }
+  .contact h4{
+    font-size: 20px;
+  }
+  .contact h4, h5{
+    margin: 0;
+  }
+  .contact div a img{
+    width: 20px;
+    height: 20px;
   }
 }
