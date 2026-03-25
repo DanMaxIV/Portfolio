@@ -307,7 +307,10 @@ button:hover {
 }
 
 @media screen and (max-width: 768px) {
-    .hamburger {
+    #Skill{
+      scroll-margin-top: 40px;
+    }
+  .hamburger {
     display: flex;
   }
   .header {
@@ -385,7 +388,7 @@ button:hover {
   }
   .aboutMe {
     text-align: center;
-    padding: 50px 0;
+    padding: 70px 0 50px 0;
   }
   .aboutMe .wrap .left h3 {
     font-size: 20px !important;
