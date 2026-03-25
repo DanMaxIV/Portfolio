@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="left">
+        <h2>Daniel Obadiah</h2>
+        <h5>Web Developer & Designer</h5>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="right nav-menu" id="nav-menu">
+        <a href="#About">About</a>
+        <a href="#Skill">Skills</a>
+        <a href="#Portfolio">Portfolio</a>
+        <a href="#Contact">Contact</a>
+      </div>
+    </div>
+    <div class="main">
+      <div class="left">
+        <h1>Hi, I'm <span>Daniel Obadiah,</span></h1>
+        <h3>
+          I create modern and responsive websites with fast UI and clean layouts
+          that helps real people solve real problems.<br />
+          Currently focused on React and javaScript.
+        </h3>
+        <button class="works">VIEW MY WORK</button>
+      </div>
+      <div class="right">
+        <img src="/assests/Profile.png" alt="My Picture" />
+      </div>
+    </div>
+    <section class="aboutMe">
+      <div class="left" id="About">
+        <h2>About Me</h2>
+        <h3>
+          I'm Daniel, a passionate developer and a designer based in Nigeria.
+          With 2+ years of experience,<br />
+          i specialize in creating beautiful, functional digital experiences.
+        </h3>
+      </div>
+      <div class="right">
+        <img src="assests/Me1.jpg" alt="" />
+      </div>
+    </section>
+    <section class="skills" id="Skill">
+      <h2>My Skills</h2>
+      <div class="skillSet">
+        <div class="skillcard">
+          <i class="devicon-html5-plain colored"></i>
+          <h4>HTML</h4>
+        </div>
+        <div class="skillcard">
+          <i class="devicon-css3-plain colored"></i>
+          <h4>CSS</h4>
+        </div>
+        <div class="skillcard">
+          <i class="devicon-javascript-plain colored"></i>
+          <h4>javaScript</h4>
+        </div>
+        <div class="skillcard">
+          <i class="devicon-react-original colored"></i>
+          <h4>React</h4>
+        </div>
+        <div class="skillcard">
+          <i class="devicon-nodejs-plain colored"></i>
+          <h4>Node.js</h4>
+        </div>
+        <div class="skillcard">
+          <i class="devicon-firebase-plain colored"></i>
+          <h4>Firebase</h4>
+        </div>
+        <div class="skillcard">
+          <i class="devicon-mysql-original mysql"></i>
+          <h4>MySql</h4>
+        </div>
+      </div>
+    </section>
+    <section class="projects" id="Portfolio">
+      <span>Projects</span>
+      <div class="projectContainer">
+        <div class="projectCard">
+          <div class="imgcontainer">
+            <img src="/assests/Farm.png" alt="Farm Picture" />
+          </div>
+          <div class="projectDetail">
+            <h3>Diary Products</h3>
+            <h4>
+              Designed a single-page diary products website using modern
+              technologies, with smooth navigation and responsive design
+            </h4>
+            <a href="https://landing-page-jylc8ap1e-danmaxs-projects-d91c1432.vercel.app/"
+              >Visit project</a>
+          </div>
+        </div>
+        <div class="projectCard">
+          <div class="imgcontainer">
+            <img src="/assests/Todo.png" alt="Farm Picture" />
+          </div>
+          <div class="projectDetail">
+            <h3>Todo App</h3>
+            <h4>
+              A To-do app that allows user to add, edit and delete tasks.
+              Designed with a clean interface for efficient task management.
+            </h4>
+            <a href="https://todoapp-ecru-eight.vercel.app/"
+              >Visit project</a>
+          </div>
+        </div>
+        <div class="projectCard">
+          <div class="imgcontainer">
+            <img src="/assests/Weather.png" alt="Farm Picture" />
+          </div>
+          <div class="projectDetail">
+            <h3>Weather App</h3>
+            <h4>
+              A responsive weather app that allows user to search for any city
+              and view current weather conditions such as temperature, wiind
+              speed and humidity.
+            </h4>
+            <a href="https://weather-app-pi-flame-30.vercel.app/"
+              >Visit project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="Contact">
+      <h4>Get In Touch</h4>
+      <h5>Email: <a href="mailto:daobad03@gmail.com">daobad03@gmail.com</a></h5>
+      <div>
+        <a href="https://linkedin.com/">
+          <img
+            src="/assests/linkedin-svgrepo-com.svg"
+            alt="linkedin"
+            width="30"
+            height="30"
+          />
+        </a>
+        <a href="https://x.com/dany_max2">
+          <img
+            src="/assests/twitter-svgrepo-com.svg"
+            alt="Twitter"
+            width="30"
+            height="30"
+          />
+        </a>
+      </div>
+    </section>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navMenu = document.getElementById("nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        hamburger.classList.toggle("active");
+      });
+
+      document.querySelectorAll(".nav-menu a").forEach((n) =>
+        n.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+          hamburger.classList.remove("active");
+        }),
+      );
+    </script>
+  </body>
+</html>
