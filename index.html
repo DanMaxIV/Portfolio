@@ -29,7 +29,7 @@
         <a href="#Contact">Contact</a>
       </div>
     </div>
-    <div class="main">
+    <div class="main reveal">
       <div class="left">
         <h1>Hi, I'm <span>Daniel Obadiah,</span></h1>
         <h3>
@@ -43,7 +43,7 @@
         <img src="assets/Profile.png" alt="My Picture" />
       </div>
     </div>
-    <section class="aboutMe">
+    <section class="aboutMe reveal">
       <div class="left" id="About">
         <h2>About Me</h2>
         <h3>
@@ -56,7 +56,7 @@
         <img src="assets/Me1.jpg" alt="" />
       </div>
     </section>
-    <section class="skills" id="Skill">
+    <section class="skills reveal" id="Skill">
       <h2>My Skills</h2>
       <div class="skillSet">
         <div class="skillcard">
@@ -89,7 +89,7 @@
         </div>
       </div>
     </section>
-    <section class="projects" id="Portfolio">
+    <section class="projects reveal" id="Portfolio">
       <span>Projects</span>
       <div class="projectContainer">
         <div class="projectCard">
@@ -137,7 +137,7 @@
         </div>
       </div>
     </section>
-    <section class="contact" id="Contact">
+    <section class="contact reveal" id="Contact">
       <h4>Get In Touch</h4>
       <h5>Email: <a href="mailto:daobad03@gmail.com">daobad03@gmail.com</a></h5>
       <div>
@@ -163,7 +163,22 @@
     <script>
       const hamburger = document.getElementById("hamburger");
       const navMenu = document.getElementById("nav-menu");
+      const revealSection = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            // observer.unobserve(entry.target);
+          }
+        });
+      };
+      const sectionObserver = new IntersectionObserver(revealSection, {
+        root: null,
+        threshold: 0.15,
+      });
 
+      document.querySelectorAll('.reveal').forEach(section => {
+        sectionObserver.observe(section);
+      });
       hamburger.addEventListener("click", () => {
         navMenu.classList.toggle("active");
         hamburger.classList.toggle("active");

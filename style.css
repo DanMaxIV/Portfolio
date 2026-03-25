@@ -242,6 +242,17 @@ button:hover {
     display: flex;
     gap: 10px;
 }
+.reveal{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.2s cubic-bezier(0.5, 0, 0, 1);
+    visibility: hidden;
+}
+.reveal.active{
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
 #About,
 #Skill,
 #Contact,
